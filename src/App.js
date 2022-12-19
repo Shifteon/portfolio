@@ -1,31 +1,44 @@
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {FaUser, FaLaptopCode, FaPencilRuler, FaUserCheck} from "react-icons/fa";
 import Navbar from "./components/navbar";
+import Bio from './pages/Bio';
+import Sidenav from './components/Sidenav';
+import './pages/style.scss';
+import Projects from './pages/Projects';
 
 function App() {
   const links = [
     {
-      href: "#",
-      text: "About Me"
+      href: "/",
+      text: "About",
+      icon: FaUser
     },
     {
-      href: "#",
-      text: "Projects"
+      href: "/projects",
+      text: "Projects",
+      icon: FaLaptopCode
     },
     {
-      href: "#",
-      text: "Skills"
+      href: "/skills",
+      text: "Skills",
+      icon: FaPencilRuler
     },
     {
-      href: "#",
-      text: "Experience"
+      href: "/experience",
+      text: "Experience",
+      icon: FaUserCheck
     }
-  ]
+  ];
   return (
     <Router>
     <Navbar />
-    <Routes>
-        {/* <Route exact path='/' element={<Home } /> */}
-    </Routes>
+    <div id='main'>
+      <Sidenav links={links} />
+      <Routes>
+          <Route exact path='/' element={<Bio />} />
+          <Route exact path='/projects' element={<Projects />} />
+      </Routes>
+    </div>
     </Router>
   );
 }
