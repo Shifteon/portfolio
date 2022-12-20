@@ -15,4 +15,21 @@
     .card-content {
         padding: 1em;
     }
+
+    a {
+        border: 1px solid #3A435E;
+        border-radius: .25em;
+        background-color: #3A435E;
+        color: white;
+        padding: .25em;
+        margin: .25em;
+
+        text-decoration: none;
+        transition: all .25s;
+
+        &:hover {
+            background-color: white;
+            color: #3A435E;
+        }
+    }
 }

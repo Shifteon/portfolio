@@ -4,6 +4,33 @@ import './style.scss';
 function Projects() {
 
   const cards = [{
+    image: "images/pokemon.png",
+    title: "Pokedex",
+    content: "A Pokedex application built using JavaScript.",
+    links: [{
+      href: "https://github.com/Shifteon/shifteon.github.io/tree/master/wdd330/pokedex",
+      text: "Github"
+    }, {
+      href: "https://shifteon.github.io/wdd330/pokedex/index.html",
+      text: "View"
+    }]
+  }, {
+    image: "images/dance-card.png",
+    title: "Dance Card SDD",
+    content: "Software design document for a dance card application. Worked with a team of 17 people to create this.",
+    links: [{
+      href: "https://docs.google.com/document/d/1IlNKa682XbbSfQORzRms6kyAXc6B1PcI/edit?usp=sharing&ouid=114077024874967180302&rtpof=true&sd=true",
+      text: "View"
+    }]
+  }, {
+    image: "images/campus_art.png",
+    title: "Campus Art",
+    content: "A web application to help people navigate the artwork on the BYU Idaho campus.",
+    links: [{
+      href: "https://github.com/Shifteon/campus_art",
+      text: "Github"
+    }]
+  }, {
     image: "images/hedgehog.png",
     title: "Hedgehog Garden",
     content: "A console based game written in Python.",
@@ -55,14 +82,6 @@ function Projects() {
       text: "Github"
     }]
   }, {
-    image: "images/campus_art.png",
-    title: "Campus Art",
-    content: "A web application to help people navigate the artwork on the BYU Idaho campus.",
-    links: [{
-      href: "https://github.com/Shifteon/campus_art",
-      text: "Github"
-    }]
-  }, {
     image: "images/waypoint.png",
     title: "Waypoint Clothing",
     content: "A website for a student clothing company.",
@@ -78,31 +97,12 @@ function Projects() {
       href: "https://github.com/Shifteon/hedgehog-garden-graphical",
       text: "Github"
     }]
-  }, {
-    image: "images/pokemon.png",
-    title: "Pokedex",
-    content: "A Pokedex application built using JavaScript.",
-    links: [{
-      href: "https://github.com/Shifteon/shifteon.github.io/tree/master/wdd330/pokedex",
-      text: "Github"
-    }, {
-      href: "https://shifteon.github.io/wdd330/pokedex/index.html",
-      text: "View"
-    }]
-  }, {
-    image: "images/dance-card.png",
-    title: "Dance Card SDD",
-    content: "Software design document for a dance card application. Worked with a team of 17 people to create this.",
-    links: [{
-      href: "https://docs.google.com/document/d/1IlNKa682XbbSfQORzRms6kyAXc6B1PcI/edit?usp=sharing&ouid=114077024874967180302&rtpof=true&sd=true",
-      text: "View"
-    }]
   }];
 
   return ( 
-    <div className = 'layout' id = 'projects' >
+    <div className='layout' id='projects' >
       <h1 className='center-text'>Projects</h1>
-      <CardContainer cards = {cards}/> 
+      <CardContainer cards={cards}/> 
     </div>
   );
 }

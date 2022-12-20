@@ -44,29 +44,55 @@ html, body, #root {
 #bio {
     padding: 1em;
     height: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
     .pic {
-        display: grid;
-        justify-self: center;
+        // display: grid;
+        justify-self: start;
+        text-align: center;
+
+        h2, h3 {
+            margin: 0;
+        }
     
         img {
-            border-radius: 50%;
+            border-radius: .25em;
             width: 50%;
-            justify-self: center;
+            background-color: #EAEAEA;
+            padding: .5em;
         }
     }
+    .bio-content {
+        margin-top: 5%;
+        grid-column: 2/3;
+    }
     .text {
-        justify-self: center;
-        width: 50%;
+        justify-self: start;
+        align-self: end;
+        // width: 50%;
+        grid-column: 2/3;
         p {
             font-size: 1.25em;
-            text-align: center;
+            // text-align: center;
         }
     }
     .links {
         justify-self: center;
+        grid-column: 2/3;
+        margin: 0 auto;
+        width: 50%;
 
         a {
             margin: 1em;
         }
+    }
+}
+
+#projects {
+    h1 {
+        border-bottom: solid 3px black;
+        // padding: 1em;
+        width: 90%;
+        margin: 0 auto;
     }
 }

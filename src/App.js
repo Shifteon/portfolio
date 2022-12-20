@@ -5,6 +5,8 @@ import Bio from './pages/Bio';
 import Sidenav from './components/Sidenav';
 import './pages/style.scss';
 import Projects from './pages/Projects';
+import Skills from './pages/Skills';
+import Experience from './pages/Experience';
 
 function App() {
   const links = [
@@ -37,6 +39,8 @@ function App() {
       <Routes>
           <Route exact path='/' element={<Bio />} />
           <Route exact path='/projects' element={<Projects />} />
+          <Route exact path='/skills' element={<Skills />} />
+          <Route exact path='/experience' element={<Experience />} />
       </Routes>
     </div>
     </Router>

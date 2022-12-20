@@ -33,6 +33,7 @@ function CardContainer({cards}) {
             title={cards[i].title}
             image={cards[i].image}
             content={cards[i].content}
+            links={cards[i].links}
           />);
         }
         i++;
