@@ -96,3 +96,44 @@ html, body, #root {
         margin: 0 auto;
     }
 }
+
+#experience {
+    .experience-section:nth-of-type(even) {
+        grid-template-columns: 80% 20%;
+
+        .description {
+            margin-left: 1em;
+        }
+
+        img {
+            justify-self: end;
+        }
+    }
+
+    .experience-section {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        background-color: #EAEAEA;
+        width: 90%;
+        height: fit-content;
+        margin: .5em auto;
+        border-radius: .25em;
+        img {
+            width: 80%;
+            margin: .25em;
+            border-radius: .25em;
+            background-color: white;
+            padding: .25em;
+            align-self: center;
+        }
+
+        h2, h3 {
+            margin: 0;
+        }
+
+        .description {
+            align-self: start;
+            margin-top: .25em;
+        }
+    }
+}

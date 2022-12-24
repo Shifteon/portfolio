@@ -4,6 +4,20 @@ import './style.scss';
 function Projects() {
 
   const cards = [{
+    image: "images/mural.png",
+    title: "Mural",
+    content: "A web application built using React, Node, and AWS. Provides a daily drawing prompt, and users can upload artwork they drew for the prompt.",
+    links: [{
+      href: "https://github.com/Shifteon/mural-node",
+      text: "Github Node"
+    }, {
+      href: "https://github.com/Shifteon/mural-react",
+      text: "Github React"
+    }, {
+      href: "https://mural-draw.com",
+      text: "View"
+    }]
+  }, {
     image: "images/pokemon.png",
     title: "Pokedex",
     content: "A Pokedex application built using JavaScript.",
