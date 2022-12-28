@@ -20,6 +20,11 @@
         padding: 1em;
     }
 
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     a {
         border: 1px solid #3A435E;
         border-radius: .25em;

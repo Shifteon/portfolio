@@ -11,14 +11,49 @@ function Column({content}) {
   );
 }
 
-function CardContainer({cards}) {
-  const numColumns = 3;
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
 
+function CardContainer({cards}) {
   const [content, setContent] = React.useState();
+  const [numColumns, setNumColumns] = React.useState(3);
+  const [windowDimensions, setWindowDimensions] = React.useState(getWindowDimensions());
+
+  React.useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+    
+    if (windowDimensions.width < 1000) {
+      if (windowDimensions.width < 600) {
+        setNumColumns(1);
+      } else {
+        setNumColumns(2);
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  React.useEffect(() => {
+    if (windowDimensions.width < 1000) {
+      if (windowDimensions.width < 600) {
+        setNumColumns(1);
+      } else {
+        setNumColumns(2);
+      }
+    }
+  }, [windowDimensions]);
 
   React.useEffect(() => {
     setContent(createContent());
-  }, []);
+  }, [numColumns]);
 
   const createContent = () => {
     const content = [];

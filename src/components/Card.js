@@ -8,7 +8,9 @@ function Card({image, title, content, links}) {
       <div className="card-content">
         <h2>{title}</h2>
         <p>{content}</p>
-        {links.map(link => <a href={link.href} target="_blank" rel="noreferrer" >{link.text}</a> )}
+        <div className="links">
+          {links.map(link => <a href={link.href} target="_blank" rel="noreferrer" >{link.text}</a> )}
+        </div>
       </div>
     </div>
   );
