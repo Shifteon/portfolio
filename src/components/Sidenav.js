@@ -23,7 +23,8 @@ function Sidenav({links}) {
           return (
           <li key={id} className={link.href === location.pathname ? "active" : ""}>
             <NavLink to={link.href}>{link.icon()} {link.text}</NavLink>
-            {link.href === location.pathname ? <FaBars id="menu" onClick={onMenuClick} /> : ""} </li>
+            <FaBars id="menu" onClick={onMenuClick} /> 
+          </li>
         );
         })}
       </ul>

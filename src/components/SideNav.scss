@@ -51,6 +51,14 @@
             li {
                 display: none;
 
+                #menu {
+                    display: none;
+                    align-self: center;
+                    justify-self: end;
+                    padding-right: 1em;
+                    color: #3A435E;
+                }
+
                 &:hover {
                     background-color: white;
                 }
@@ -65,10 +73,6 @@
     
                     #menu {
                         display: block;
-                        align-self: center;
-                        justify-self: end;
-                        padding-right: 1em;
-                        color: #3A435E;
                     }
                 }
             }
@@ -81,8 +85,25 @@
                 li {
                     display: block;
 
+                    &:first-of-type {
+                        display: grid;
+                        grid-template-columns: 80% 20%;
+                        #menu {
+                            display: block;
+                        }
+                        &.active {
+                            #menu {
+                                display: block;
+                            }
+                        }
+                    }
+
                     &.active {
                         display: grid;
+
+                        #menu {
+                            display: none;
+                        }
                     }
                 }
             }

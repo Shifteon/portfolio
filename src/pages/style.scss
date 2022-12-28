@@ -17,7 +17,7 @@ main {
 
     @media only screen and (max-width: 1000px) {
         grid-template-columns: 1fr;
-        height: 100%;
+        height: 85%;
         width: 90%;
     }
 }
@@ -99,6 +99,39 @@ html, body, #root {
             margin: 1em;
         }
     }
+
+    @media only screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
+        padding: 0;
+        padding-top: .5em;
+        padding-bottom: .5em;
+
+        .pic {
+            width: 100%;
+            img {
+                width: 35%;
+            }
+        }
+
+        .bio-content {
+            width: 90%;
+            justify-self: center;
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        .links {
+            width: 75%;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            a {
+                &:first-of-type {
+                    justify-self: end;
+                }
+            }
+        }
+    }
 }
 
 #projects {
@@ -132,6 +165,11 @@ html, body, #root {
         border-radius: .5em;
         width: 50%;
         margin: .25em;
+        height: 25px;
+
+        @media only screen and (max-width: 1030px) {
+            width: 120px;
+        }
     }
 
     .skills {
