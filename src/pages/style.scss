@@ -175,6 +175,9 @@ html, body, #root {
     .skills {
         width: 70%;
         margin: 0 auto;
+        @media only screen and (max-width: 400px) {
+            margin-left: 1em;
+        }
     }
 }
 

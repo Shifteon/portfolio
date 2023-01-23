@@ -71,7 +71,8 @@ function CardContainer({cards}) {
             links={cards[i].links}
           />);
         }
-        i++;
+        if (c !== numColumns - 1)
+          i++;
       }
     }
   
